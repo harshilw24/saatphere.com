@@ -21,6 +21,7 @@
     </div>
     <% ms() %>
     <div class="row text-center" style="display:flex; flex-wrap:wrap;">
+        <% campgrounds.forEach(function(campground){ %>
         <% if(campground.count === 3) { %>
             <div class="col-md-3 col-sm-6">
                 <div class="thumbnail">
@@ -34,6 +35,8 @@
                 </div>
             </div>
         <% }) %>
+        <% }) %>
+        <% campgrounds.forEach(function(campground){ %>
         <% if(campground.count === 2) { %>
             <div class="col-md-3 col-sm-6">
                 <div class="thumbnail">
@@ -47,6 +50,8 @@
                 </div>
             </div>
         <% }) %>
+        <% }) %>
+        <% campgrounds.forEach(function(campground){ %>
         <% if(campground.count === 1) { %>
             <div class="col-md-3 col-sm-6">
                 <div class="thumbnail">
@@ -59,6 +64,7 @@
                     </p>
                 </div>
             </div>
+        <% }) %>
         <% }) %>
     </div>
 
