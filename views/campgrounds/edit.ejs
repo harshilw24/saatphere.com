@@ -1,0 +1,55 @@
+<%- include("../partials/header") %>
+    <div class="row">    
+        <h1 style="text-align: center;">
+            Edit <%= campground.name %>
+        </h1>
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/campgrounds/<%=campground._id%>?_method=PUT" method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="campground[name]" placeholder="name" value="<%=campground.name%>">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="number" name="campground[phoneNumber]" placeholder="Phone Number" value="<%=campground.phoneNumber%>">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="campground[image]" placeholder="image url" value="<%=campground.image%>">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="number" name="campground[age]" placeholder="age" value="<%= campground.age %>" step="1" min="21" required>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Occupation" name="campground[occupation]" value="<%=campground.occupation%>">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="gender" name="campground[gender]" value="<%=campground.gender%>">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="education" name="campground[education]" value="<%=campground.education%>">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="hometown" name="campground[hometown]" value="<%=campground.hometown%>">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="number" placeholder="Do You Like Mountains?(1:yes/0:no)" name="campground[q1]" value="<%=campground.q1%>">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="number" placeholder="Do You Like Dogs?(1:yes/0:no)" name="campground[q2]" value="<%=campground.q2%>">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="number" placeholder="Do You Like Watching Movies?(1:yes/0:no)" name="campground[q3]" value="<%=campground.q3%>">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="number" placeholder="Do You Like Singing?(1:yes/0:no)" name="campground[q4]" value="<%=campground.q4%>">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="number" placeholder="Do You Like Dancing?(1:yes/0:no)" name="campground[q5]" value="<%=campground.q5%>">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary btn-lg btn-default btn-block">Submit</button>
+                </div>
+            </form>
+            <a href="/campgrounds">Go Back</a>
+        </div>
+    </div>
+
+<%- include("../partials/footer") %>
